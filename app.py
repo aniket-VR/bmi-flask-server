@@ -1,6 +1,8 @@
 from flask import Flask,render_template,request
 import numpy as np
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
+tf.compat.v1.reset_default_graph()
 import logging
 import face_recognition 
 import pandas as pd
@@ -55,4 +57,4 @@ def predict():
     
 
 if __name__ =='__main__':
-    app.run(debug=True)
+    app.run(debug=False)
