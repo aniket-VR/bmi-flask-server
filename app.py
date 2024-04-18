@@ -6,7 +6,6 @@ import face_recognition
 import pandas as pd
 import time
 import os
-from PIL import Image
 def my_face_encoding(image_path):
     print(image_path)
     logging.info("Getting face encoding for image %s", image_path)
